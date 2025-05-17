@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0,100), rgb(109, 58, 119));
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Background Image Overlay */
+body::before {
+    content: "";
+    position: fixed;
+
+    height: 100%;
+    width: 100%;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    z-index: -1;
+}
+
+
+/* Menu */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+
+.menu ul li a:hover {
+    color: rgb(199, 139, 255);
+}
+/* Main Centered Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 40px; /* top padding for menu */
+    text-align: center;
+    z-index: 1;
+}
+
+.main-content h1 {
+    font-size: 60px;
+    margin-bottom: 40px;
+    color: rgb(199, 139, 255);
+}
+
+/* Project Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Project Card */
+.project {
+    background-color: rgb(212, 212, 212);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: black;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project img {
+    width: 550px;
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+.paragraph p {
+    color: rgb(0, 0, 0);
+    background-color: rgb(200, 200, 200);
+    ;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 650px;
+    text-align: left;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+    }
+    .main-content h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .project {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .paragraph p {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        right: 15px;
+        top: 15px;
+    }
+
+    .menu ul li a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .project {
+        padding: 10px;
+    }
+
+    .project img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,79 @@
+
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    /*<link rel="stylesheet" href="contactStyle.css">
+    <title>Homepage design</title>
+</head>
+
+<body>
+    <div class="banner-area">
+    <header>
+           <div class="menu">
+                <ul>
+                    <li><a href="HomePage.html">Home</a></li>
+                    <li><a href="aboutPage.html">About</a></li>
+                    <li><a href="portfolioPage.html">Portfolio</a></li>
+                    <li><a href="skillsPage.html">Skills</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+        </header>
+
+        <div class="banner-text">
+            <h1>Advice?</h1>
+
+        </div>
+
+
+    </div>
+    <div class = "infoWrapper">
+        <div class="container">
+            <div>
+                <h1>Contact Me</h1>
+                <form id="myForm">
+                    <label for ="fname">FirstName</label>
+                    <input type="text" id="fname" name ="firstname" placeholder="Your name..">
+                    <label for="lname">LastName</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="e-mail" placeholder="enter your email">
+                    <label for="subject">Subject</label>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." ></textarea>
+                    <input type="submit" value="Submit" onclick="">
+
+            
+                    
+                </form>
+                <p id="responseMessage" style="color: green; display: none;">Message received!</p>
+
+            
+    </div>
+    <div>
+        <h1>Here are my socials</h1>
+        <a id="git" href="https://github.com/EricAyala21" target="_blank" ><img src="github.png"alt = github></a>
+        <a id= "linked" href="www.linkedin.com/in/eric-ayala-4346562a3" target="_blank"><img src="linkedIn.webp" alt="linkedIn"></a>
+    </div>
+        
+    </div>
+
+    <script>
+        function submitMessage(event){
+            event.preventDefault()
+            document.getElementById('myForm').reset();
+
+            document.getElementById('responseMessage').style.display= 'block';
+            setTimeout(timeOut, 3000);
+        }
+        function timeOut(){
+            responseMessage.style.display = 'none';
+        }
+        document.getElementById('myForm').addEventListener('submit', submitMessage);
+
+    </script>
+</body>
+

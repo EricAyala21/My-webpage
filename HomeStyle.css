@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(109, 58, 119, 0.8));
+    z-index: -1;
+}
+
+/* Header & Menu */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+
+.menu ul li a:hover {
+    color: rgb(199, 139, 255);
+}
+
+/* Banner Text Container */
+.banner-text {
+    position: relative;
+    width: 600px;
+    max-width: 90%;
+    margin: 150px auto 50px;
+    text-align: center;
+    z-index: 1;
+}
+
+.banner-text h1 {
+    font-size: 60px;
+    color: rgb(199, 139, 255);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.banner-text p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.banner-text a {
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.banner-text a:hover {
+    background-color: white;
+    color: rgba(68, 25, 109, 0.623);
+    font-weight: bold;
+}
+
+/* Profile / Banner Image */
+.banner-text img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+/* Container for projects or content blocks */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Each project card */
+.project {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: black;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project img {
+    width: 300px;
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+.paragraph p {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 350px;
+    text-align: left;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+    }
+
+    .banner-text h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .banner-text img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .container {
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .project {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .paragraph p {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        right: 15px;
+        top: 15px;
+    }
+
+    .menu ul li a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .banner-text h1 {
+        font-size: 30px;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+
+    .banner-text img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .project {
+        padding: 10px;
+    }
+
+    .project img {
+        width: 100%;
+    }
+}

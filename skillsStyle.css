@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0,100), rgb(109, 58, 119));
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Background Image Overlay */
+body::before {
+    content: "";
+    position: fixed;
+
+    height: 100%;
+    width: 100%;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    z-index: -1;
+}
+
+/* Menu */
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+
+.menu ul li a:hover {
+    color: rgb(199, 139, 255);
+}
+
+/* Banner Text */
+.banner-text {
+    text-align: center;
+    color: rgb(199, 139, 255);
+    font-family: 'Poppins', sans-serif;
+    padding-top: 50px;
+}
+
+.banner-text h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.banner-text p {
+    color: #fff;
+    font-size: 18px;
+}
+
+
+
+/* Content Wrapper */
+.infoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+/* Project Container */
+.container {
+    background-color: rgb(212, 212, 212);
+    border-radius: 10px;
+    padding: 20px;
+    width: 700px;
+    max-width: 90%;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Container Text */
+.container > div {
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+}
+
+/* ========== Responsive Breakpoints ========== */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+    }
+
+    .banner-text h1 {
+        font-size: 40px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .container_content p {
+        font-size: 16px;
+    }
+
+    .resume a {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        right: 15px;
+        top: 15px;
+    }
+
+    .menu ul li a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .banner-text h1 {
+        font-size: 30px;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
